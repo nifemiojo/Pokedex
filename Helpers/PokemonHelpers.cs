@@ -39,7 +39,7 @@ namespace Pokedex.Helpers
             using var client = new HttpClient( );
             string uri;
 
-            if ( pokemon.Habitat == "cave" | pokemon.IsLegendary == true )
+            if ( pokemon.Habitat == "cave" || pokemon.IsLegendary == true )
                 uri = $"https://api.funtranslations.com/translate/yoda.json?text={pokemon.Description}";
             else
                 uri = $"https://api.funtranslations.com/translate/shakespeare.json?text={pokemon.Description}";
