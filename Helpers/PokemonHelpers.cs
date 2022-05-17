@@ -34,16 +34,21 @@ namespace Pokedex.Helpers
             return pokemon;
         }
 
-        public static async Task<string> TranslatePokemonDescription ( string description, string translationType )
+        public static async Task<string> TranslatePokemonDescription ( Pokemon pokemon )
         {
             using var client = new HttpClient( );
+            string uri;
 
-            var uri = $"https://api.funtranslations.com/translate/{translationType}.json?text={description}";
+            if ( pokemon.Habitat == "cave" | pokemon.IsLegendary == true )
+                uri = $"https://api.funtranslations.com/translate/yoda.json?text={pokemon.Description}";
+            else
+                uri = $"https://api.funtranslations.com/translate/shakespeare.json?text={pokemon.Description}";
+
             var response = await client.GetStringAsync( uri );
 
             JsonNode yodaResponseNode = JsonNode.Parse( response )!;
 
-            var translated_description = yodaResponseNode? [ "contents" ]? [ "translated" ]?.ToString( ) ?? description;
+            var translated_description = yodaResponseNode? [ "contents" ]? [ "translated" ]?.ToString( ) ?? pokemon.Description;
 
             return translated_description;
         }

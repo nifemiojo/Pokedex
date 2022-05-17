@@ -28,12 +28,7 @@ namespace Pokedex.Controllers
             if ( pokemon == null )
                 return NotFound( );
 
-            string translated_description;
-
-            if ( pokemon.Habitat == "cave" | pokemon.IsLegendary == true )
-                translated_description = await TranslatePokemonDescription( pokemon.Description, "yoda" );
-            else
-                translated_description = await TranslatePokemonDescription( pokemon.Description, "shakespeare" );
+            var translated_description = await TranslatePokemonDescription( pokemon );
 
             pokemon.Description = translated_description;
 
