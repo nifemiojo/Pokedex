@@ -10,7 +10,16 @@ namespace Pokedex.Helpers
             var uri = $"https://pokeapi.co/api/v2/pokemon-species/{PokemonName}";
 
             using var client = new HttpClient( );
-            var response = await client.GetStringAsync( uri );
+            string response;
+
+            try
+            {
+                response = await client.GetStringAsync( uri );
+            }
+            catch ( HttpRequestException )
+            {
+                return null!;
+            }
 
             JsonNode responseNode = JsonNode.Parse( response )!;
 

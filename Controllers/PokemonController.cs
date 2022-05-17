@@ -12,6 +12,9 @@ namespace Pokedex.Controllers
         public async Task<ActionResult<Pokemon>> GetPokemon ( string PokemonName )
         {
             Pokemon pokemon = await GetBasicPokemon( PokemonName);
+
+            if ( pokemon == null )
+                return NotFound();
             
             return Ok( pokemon );
         }
@@ -21,6 +24,10 @@ namespace Pokedex.Controllers
         public async Task<ActionResult<Pokemon>> GetTranslatedPokemon ( string PokemonName )
         {
             Pokemon pokemon = await GetBasicPokemon( PokemonName );
+
+            if ( pokemon == null )
+                return NotFound( );
+
             string translated_description;
 
             if ( pokemon.Habitat == "cave" | pokemon.IsLegendary == true )
