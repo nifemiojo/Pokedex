@@ -1,0 +1,47 @@
+commit 767afdc2b211ce7a5f04ced328283fc18f4f0d8c
+Author: Femi Ojo <nifemiojo13@yahoo.co.uk>
+Date:   Tue May 17 16:47:23 2022 +0100
+
+    Make swagger available and updated README
+
+commit a2720d99ea9452db44bbf30b52c4667cee6dc272
+Author: Femi Ojo <nifemiojo13@yahoo.co.uk>
+Date:   Tue May 17 15:35:25 2022 +0100
+
+    Added tests and refactor translate controller
+
+commit 74934ff4f444625735f8a586a1618b1c209eaba5
+Author: Femi Ojo <nifemiojo13@yahoo.co.uk>
+Date:   Tue May 17 13:04:00 2022 +0100
+
+    Handle null case
+
+commit 293c606db4879b1b5aee6e8370d490f18eaab254
+Author: Femi Ojo <nifemiojo13@yahoo.co.uk>
+Date:   Tue May 17 12:46:58 2022 +0100
+
+    Refactoring model and controller
+
+commit edf1a8925a749044a56e462c1eab9890b53a02a1
+Author: Femi Ojo <nifemiojo13@yahoo.co.uk>
+Date:   Tue May 17 11:49:50 2022 +0100
+
+    Added translated endpoint
+
+commit a73b8a1fc0d438e30f7d05375045e1b628b1efb6
+Author: Femi Ojo <nifemiojo13@yahoo.co.uk>
+Date:   Tue May 17 00:02:21 2022 +0100
+
+    New model and basic info api
+
+commit 12e0db8d445005dc73aae7e45ea4e17d246d5b18
+Author: Femi Ojo <nifemiojo13@yahoo.co.uk>
+Date:   Mon May 16 20:21:21 2022 +0100
+
+    Add project files.
+
+commit 9cca34e65e663f7ac034bbc96bee4838b9b7cc68
+Author: Femi Ojo <nifemiojo13@yahoo.co.uk>
+Date:   Mon May 16 20:21:19 2022 +0100
+
+    Add .gitattributes, .gitignore, and README.md.
